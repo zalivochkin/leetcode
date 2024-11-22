@@ -9,12 +9,6 @@ struct ListNode {
 
 class Solution {
 public:
-    Solution() {
-        ios_base::sync_with_stdio(false);
-        cin.tie(nullptr);
-        cout.tie(nullptr);
-    }
-
     int getDecimalValue(ListNode* head) {
         if (head == nullptr) {
             return 0;

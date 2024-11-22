@@ -1,12 +1,6 @@
 
 class Solution {
 public:
-    Solution() {
-        ios_base::sync_with_stdio(false);
-        cin.tie(nullptr);
-        cout.tie(nullptr);
-    }
-
     vector<int> decrypt(vector<int>& code, int k) {
         const auto n = code.size();
         vector<int> res(n);

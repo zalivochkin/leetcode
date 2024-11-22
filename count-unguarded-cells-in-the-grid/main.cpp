@@ -1,12 +1,6 @@
 
 class Solution {
 public:
-    Solution() {
-        ios_base::sync_with_stdio(false);
-        cin.tie(nullptr);
-        cout.tie(nullptr);
-    }
-
     int countUnguarded(int m, int n, vector<vector<int>>& guards, vector<vector<int>>& walls) {
         vector<vector<int>> field(m, vector<int>(n, 0));
         for (const auto &guard : guards) {

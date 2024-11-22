@@ -1,12 +1,6 @@
 
 class Solution {
 public:
-    Solution() {
-        ios_base::sync_with_stdio(false);
-        cin.tie(nullptr);
-        cout.tie(nullptr);
-    }
-
     int takeCharacters(string s, int k) {
         const auto n = s.size();
         vector<int> cnts(3, 0);
