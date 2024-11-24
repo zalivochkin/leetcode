@@ -1,12 +1,6 @@
 
 class Solution {
 public:
-    Solution() {
-        ios_base::sync_with_stdio(false);
-        cin.tie(nullptr);
-        cout.tie(nullptr);
-    }
-
     vector<vector<char>> rotateTheBox(vector<vector<char>>& box) {
         const auto n = box.size();
         const auto m = box[0].size();
