@@ -8,6 +8,9 @@ public:
         int j;
         for (auto i = 0; i < n; ++i) {
             for (j = 0; j < m; ++j) {
+		if (i + j == n) {
+                    return -1;
+                }
                 if (sentence[i + j] == ' ' || sentence[i + j] != searchWord[j]) {
                     i += j;
                     break;
