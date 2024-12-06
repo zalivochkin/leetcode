@@ -1,4 +1,5 @@
-﻿import java.util.Set;
+﻿import java.util.HashSet;
+import java.util.Set;
 
 public class Solution {
     public int maxCount(int[] banned, int n, int maxSum) {
