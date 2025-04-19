@@ -2,7 +2,7 @@
 class Solution {
 public:
     long long countFairPairs(vector<int>& nums, int lower, int upper) {
-        sort(nums.begin(), nums.end());
+        ranges::sort(nums);
         return lb(nums, upper + 1) - lb(nums, lower);
     }
 
