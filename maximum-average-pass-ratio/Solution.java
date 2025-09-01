@@ -1,26 +1,23 @@
-﻿
-import java.util.*;
-
 class Solution {
     public double maxAverageRatio(int[][] classes, int extraStudents) {
-        PriorityQueue<double[]> pq = new PriorityQueue<>((d1, d2) -> Double.compare(d2[0], d1[0]));
-        for (var clas : classes) {
-            var rat = (double) clas[0] / (double) clas[1];
-            var next_rat = (double) (clas[0] + 1) / (double) (clas[1] + 1);
-            pq.add(new double[]{next_rat - rat, clas[0], clas[1]});
+        PriorityQueue<double[]> pq = new PriorityQueue<>((a, b) -> {
+            double x = (a[0] + 1) / (a[1] + 1) - a[0] / a[1];
+            double y = (b[0] + 1) / (b[1] + 1) - b[0] / b[1];
+            return Double.compare(y, x);
+        });
+        for (var e : classes) {
+            pq.offer(new double[] {e[0], e[1]});
         }
-        for (var i = 0; i < extraStudents; ++i) {
-            var cl = pq.poll();
-            cl[1] += 1;
-            cl[2] += 1;
-            cl[0] = (cl[1] + 1.0) / (cl[2] + 1.0) - cl[1] / cl[2];
-            pq.add(cl);
+        while (extraStudents-- > 0) {
+            var e = pq.poll();
+            double a = e[0] + 1, b = e[1] + 1;
+            pq.offer(new double[] {a, b});
         }
         double ans = 0;
         while (!pq.isEmpty()) {
-            var cl = pq.poll();
-            ans += cl[1] / cl[2];
+            var e = pq.poll();
+            ans += e[0] / e[1];
         }
-        return ans / (double) classes.length;
+        return ans / classes.length;
     }
 }
