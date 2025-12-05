@@ -1,19 +1,7 @@
----
-comments: true
-difficulty: Easy
-edit_url: https://github.com/doocs/leetcode/edit/main/solution/2100-2199/2169.Count%20Operations%20to%20Obtain%20Zero/README_EN.md
-rating: 1199
-source: Weekly Contest 280 Q1
-tags:
-    - Math
-    - Simulation
----
 
 <!-- problem:start -->
 
 # [2169. Count Operations to Obtain Zero](https://leetcode.com/problems/count-operations-to-obtain-zero)
-
-[中文文档](/solution/2100-2199/2169.Count%20Operations%20to%20Obtain%20Zero/README.md)
 
 ## Description
 
@@ -62,96 +50,5 @@ So the total number of operations required is 1.
 </ul>
 
 <!-- description:end -->
-
-## Solutions
-
-<!-- solution:start -->
-
-### Solution 1
-
-<!-- tabs:start -->
-
-#### Python3
-
-```python
-class Solution:
-    def countOperations(self, num1: int, num2: int) -> int:
-        ans = 0
-        while num1 and num2:
-            if num1 >= num2:
-                num1, num2 = num2, num1
-            num2 -= num1
-            ans += 1
-        return ans
-```
-
-#### Java
-
-```java
-class Solution {
-    public int countOperations(int num1, int num2) {
-        int ans = 0;
-        while (num1 != 0 && num2 != 0) {
-            if (num1 >= num2) {
-                num1 -= num2;
-            } else {
-                num2 -= num1;
-            }
-            ++ans;
-        }
-        return ans;
-    }
-}
-```
-
-#### C++
-
-```cpp
-class Solution {
-public:
-    int countOperations(int num1, int num2) {
-        int ans = 0;
-        while (num1 && num2) {
-            if (num1 > num2) swap(num1, num2);
-            num2 -= num1;
-            ++ans;
-        }
-        return ans;
-    }
-};
-```
-
-#### Go
-
-```go
-func countOperations(num1 int, num2 int) int {
-	ans := 0
-	for num1 != 0 && num2 != 0 {
-		if num1 > num2 {
-			num1, num2 = num2, num1
-		}
-		num2 -= num1
-		ans++
-	}
-	return ans
-}
-```
-
-#### TypeScript
-
-```ts
-function countOperations(num1: number, num2: number): number {
-    let ans = 0;
-    while (num1 && num2) {
-        [num1, num2] = [Math.min(num1, num2), Math.abs(num1 - num2)];
-        ans++;
-    }
-    return ans;
-}
-```
-
-<!-- tabs:end -->
-
-<!-- solution:end -->
 
 <!-- problem:end -->
