@@ -1,6 +1,4 @@
 ﻿
-import java.util.*;
-
 class Solution {
     public String findDifferentBinaryString(String[] nums) {
         int mask = 0;
