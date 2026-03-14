@@ -1,6 +1,4 @@
 ﻿
-import java.util.*;
-
 class Solution {
     public void dfs(List<String> ans, String s, int n) {
         if (s.length() == n) {
