@@ -1,20 +1,7 @@
----
-comments: true
-difficulty: Hard
-edit_url: https://github.com/doocs/leetcode/edit/main/solution/3400-3499/3474.Lexicographically%20Smallest%20Generated%20String/README_EN.md
-rating: 2605
-source: Weekly Contest 439 Q4
-tags:
-    - Greedy
-    - String
-    - String Matching
----
 
 <!-- problem:start -->
 
 # [3474. Lexicographically Smallest Generated String](https://leetcode.com/problems/lexicographically-smallest-generated-string)
-
-[中文文档](/solution/3400-3499/3474.Lexicographically%20Smallest%20Generated%20String/README.md)
 
 ## Description
 
@@ -109,41 +96,5 @@ tags:
 </ul>
 
 <!-- description:end -->
-
-## Solutions
-
-<!-- solution:start -->
-
-### Solution 1
-
-<!-- tabs:start -->
-
-#### Python3
-
-```python
-
-```
-
-#### Java
-
-```java
-
-```
-
-#### C++
-
-```cpp
-
-```
-
-#### Go
-
-```go
-
-```
-
-<!-- tabs:end -->
-
-<!-- solution:end -->
 
 <!-- problem:end -->
