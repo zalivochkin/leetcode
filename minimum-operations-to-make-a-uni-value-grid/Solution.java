@@ -1,6 +1,4 @@
 ﻿
-import java.util.*;
-
 class Solution {
     public int minOperations(int[][] grid, int x) {
         final var n = grid.length;
