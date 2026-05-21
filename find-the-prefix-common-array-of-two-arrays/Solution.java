@@ -1,6 +1,4 @@
 ﻿
-import java.util.*;
-
 class Solution {
     public int[] findThePrefixCommonArray(int[] A, int[] B) {
         final var n = A.length;
