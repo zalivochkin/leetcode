@@ -1,6 +1,4 @@
 ﻿
-import java.util.*;
-
 class Solution {
     public boolean check(int[] nums) {
         final var n = nums.length;
