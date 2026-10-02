@@ -1,6 +1,4 @@
 ﻿
-import java.util.*;
-
 class Solution {
     public List<String> ans = new ArrayList<>();
     public int n;
